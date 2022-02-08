@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry's Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+    <style>
+      .homeLink {
+        float: right;
+      }
+
+      .msgbox {
+        background-color: #2B3A4C;
+        padding: 10px;
+      }
+	u {
+        -webkit-text-underline-position: under;
+  -ms-text-underline-position: below;
+  text-underline-position: under;
+  text-decoration-color: #8ed5ff;
+  	}
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Message Board</h1>
+    <br>
+    <a href="/msgupload">Upload a Message</a>
+    <a class="homeLink" href="/">Back to Home</a>
+      <br>
+      <br>
+      <% msgdb.slice().reverse().forEach(function(msgObj) { %>
+          <div class="msgbox">
+          <i><%=msgObj.author + " - " + msgObj.date%></i>
+          <br>
+	  <br>
+          <u><%= msgObj.msg %></u>
+          </div>
+          <br>
+      <% }); %>
+    </ul>
+    </div>
+  </body>
+</html>

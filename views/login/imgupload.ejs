@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry's Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+    <style>
+      .container {
+        max-width: 60rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Upload an Image</h3>
+      <form action="/imgupload" enctype="multipart/form-data" method="POST">
+        <div class="input-group">
+          <label for="file">Image File:</label>
+          <input type="file" name="img" />
+        </div>
+        <button>Upload</button>
+      </form>
+    </div>
+  </body>
+</html>

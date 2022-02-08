@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry's Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+    <style>
+      .homeLink {
+        float: right;
+      }
+
+      img {
+        display: block;
+         margin-left: auto;
+        margin-right: auto;
+      }
+
+      .imgbox {
+        background-color: #2B3A4C;
+        padding: 10px;
+      } 
+
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Image Board</h1>
+    <br>
+    <a href="/imgupload">Upload an Image</a>
+    <a class="homeLink" href="/">Back to Home</a>
+    <br>
+    <br>
+    <% imgdb.slice().reverse().forEach(function(imgObj) { %>
+          <div class="imgbox">
+          <img src="<%=imgObj.imgurl%>" alt="<%=imgObj.imgname%>">
+          </div>
+          <br>
+      <% }); %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry's Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+    <style>
+      .login-form {
+        width: 400px;
+        height: 400px;
+        margin: 1rem auto;
+      }
+
+      .input-group {
+        width: 100%;
+      }
+
+      .input-group label {
+        display: block;
+      }
+
+      .input-group input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-form">
+      <% if(err) { %>
+      <p style="color: #FF6961;"><%= err %></p>
+      <% } %>
+      <h3>Register Page</h3>
+      <form action="/register" method="POST">
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" name="username" />
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" />
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" name="password" />
+        </div>
+        <button>Register</button>
+      </form>
+      <a href="/login">Login</a>
+    </div>
+  </body>
+</html>

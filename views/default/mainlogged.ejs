@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry's Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+  <style>
+    .boardbox {
+      background-color: #2B3A4C;
+      padding: 10px;
+    }
+        footer {
+      position: fixed;
+      left: 10px;
+      bottom: 15px;
+      right: 10px;
+      width: 95%;
+      text-align: center;
+    }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1>Perry's Bulletin Board</h1>
+    <br>
+    <i>Welcome <%=userName%></i>
+    <br>
+    <br>
+    <div class="boardbox">
+    <h4><a href="/img">Image Board</a></h4>
+    <br>
+    <h4><a href="/msg">Message Board</a></h4>
+    </div>
+    <br>
+    <br>
+    <div class="boardbox">
+    <p>Users:</p>
+    <ul>
+      <% userdb.forEach(function(userObj) { %>
+        <li>
+          <p><%=userObj.name%></p>
+        </li>
+      <% }); %>
+    </ul>
+    </div>
+    <br>
+    <p>Anything weird will be deleted without notice</p>
+    <br>
+        <footer>
+            <a href="">Source Code</a>
+    </footer>
+    </div>
+  </body>
+</html>
