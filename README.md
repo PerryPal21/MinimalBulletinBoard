@@ -10,6 +10,9 @@ MBB is lightweight and minimal bulletin board made in EJS tailored for easy self
 - Nice and clean message showcase
 - very easy to selfhost thanks to Nodejs and NPM
 
+## Coming Soon
+- An easy way to delete posts
+
 ## Screenshots
 <img src="https://raw.githubusercontent.com/PerryPal21/MinimalBulletinBoard/main/assets/loggedin.png" width="600" height="600">
 <img src="https://raw.githubusercontent.com/PerryPal21/MinimalBulletinBoard/main/assets/imgpage.png" width="600" height="600">
