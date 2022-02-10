@@ -102,7 +102,7 @@ app.get("/msgupload", appController.msgupload_get);
 app.post("/imgupload", appController.imgupload_post);
 app.post("/msgupload", appController.msgupload_post);
 
-app.post("/delete",(req,res) => {
+/* app.post("/delete",(req,res) => {
   const {type, content, pass} = req.body
   if (pass === process.env.DELKEY) {
     if (type === "img") {
@@ -122,7 +122,7 @@ app.post("/delete",(req,res) => {
   if (!type || !content || !pass) {
     res.send("type, content, pass required")
   }
-})
+}) */
 
 
 app.listen(3002, () => {
